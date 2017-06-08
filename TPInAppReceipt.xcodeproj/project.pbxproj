@@ -35,7 +35,7 @@
 		47589B561E3342490047DFCD /* DeviceGUIDRetriever.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47589B551E3342490047DFCD /* DeviceGUIDRetriever.swift */; };
 		47589B571E3342490047DFCD /* DeviceGUIDRetriever.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47589B551E3342490047DFCD /* DeviceGUIDRetriever.swift */; };
 		479DC54D1DA0B8BB00D9A5E3 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479DC54C1DA0B8BB00D9A5E3 /* Date+Extension.swift */; };
-		741BB9E21EE947630013DE44 /* openssl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 741BB9E11EE947630013DE44 /* openssl.framework */; };
+		741BB9F51EE94EC50013DE44 /* openssl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 741BB9F41EE94EC50013DE44 /* openssl.framework */; };
 		F7B797AC1E43C0FB008A2619 /* InAppReceiptTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10738491DC109D48ABBBDEAE /* InAppReceiptTests.swift */; };
 /* End PBXBuildFile section */
 
@@ -70,7 +70,7 @@
 		47589B531E333F450047DFCD /* TPInAppReceipt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TPInAppReceipt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		47589B551E3342490047DFCD /* DeviceGUIDRetriever.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceGUIDRetriever.swift; sourceTree = "<group>"; };
 		479DC54C1DA0B8BB00D9A5E3 /* Date+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
-		741BB9E11EE947630013DE44 /* openssl.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = openssl.framework; sourceTree = "<group>"; };
+		741BB9F41EE94EC50013DE44 /* openssl.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = openssl.framework; path = Carthage/Build/iOS/openssl.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,7 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				741BB9E21EE947630013DE44 /* openssl.framework in Frameworks */,
+				741BB9F51EE94EC50013DE44 /* openssl.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,7 +103,7 @@
 		472099F71D9E0FD60010BCDE = {
 			isa = PBXGroup;
 			children = (
-				741BB9E11EE947630013DE44 /* openssl.framework */,
+				741BB9F31EE94EA60013DE44 /* Framework */,
 				47209ACD1D9E92CC0010BCDE /* TPInAppReceipt.podspec */,
 				47209A031D9E0FD60010BCDE /* TPInAppReceipt */,
 				47209A0E1D9E0FD60010BCDE /* TPInAppReceiptTests */,
@@ -157,6 +157,14 @@
 				479DC54C1DA0B8BB00D9A5E3 /* Date+Extension.swift */,
 			);
 			path = Source;
+			sourceTree = "<group>";
+		};
+		741BB9F31EE94EA60013DE44 /* Framework */ = {
+			isa = PBXGroup;
+			children = (
+				741BB9F41EE94EC50013DE44 /* openssl.framework */,
+			);
+			name = Framework;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -470,6 +478,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/TPInAppReceipt",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = TPInAppReceipt/Info.plist;
@@ -477,7 +486,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/openssl.framework/SharedFrameworks",
+					"$(PROJECT_DIR)/Carthage/Build/iOS/openssl.framework/SharedFrameworks",
 				);
 				OTHER_LDFLAGS = (
 					"-l\"crypto\"",
@@ -504,6 +513,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/TPInAppReceipt",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = TPInAppReceipt/Info.plist;
@@ -511,7 +521,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/openssl.framework/SharedFrameworks",
+					"$(PROJECT_DIR)/Carthage/Build/iOS/openssl.framework/SharedFrameworks",
 				);
 				OTHER_LDFLAGS = (
 					"-l\"crypto\"",
